@@ -1,12 +1,12 @@
 plugins {
-    id 'java'
-    id 'org.springframework.boot' version '2.7.9'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id "java"
+    id "org.springframework.boot" version "2.7.9"
+    id "io.spring.dependency-management" version "1.0.15.RELEASE"
     id "application"
 }
 
 allprojects {
-    group = 'com.cotenote.backend'
+    group = "com.cotenote.backend"
 
     repositories {
         mavenCentral()
@@ -14,10 +14,11 @@ allprojects {
 }
 
 subprojects {
-    apply plugin: 'java'
-    apply plugin: 'idea'
-    apply plugin: 'org.springframework.boot'
-    apply plugin: 'io.spring.dependency-management'
+    apply plugin: "java"
+    apply plugin: "java-library"
+    apply plugin: "idea"
+    apply plugin: "org.springframework.boot"
+    apply plugin: "io.spring.dependency-management"
 
 
     java {
@@ -27,14 +28,14 @@ subprojects {
 
     dependencies {
         // Spring Boot Validation
-        implementation 'org.springframework.boot:spring-boot-starter-validation'
+        implementation("org.springframework.boot:spring-boot-starter-validation")
 
         // Lombok
-        compileOnly 'org.projectlombok:lombok'
-        annotationProcessor 'org.projectlombok:lombok'
+        compileOnly("org.projectlombok:lombok")
+        annotationProcessor("org.projectlombok:lombok")
 
         // Test
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
     }
 
     configurations {
@@ -47,12 +48,3 @@ subprojects {
         useJUnitPlatform()
     }
 }
-
-
-
-
-
-
-
-
-

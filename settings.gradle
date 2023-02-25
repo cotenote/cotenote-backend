@@ -2,3 +2,6 @@ rootProject.name = 'backend'
 
 include 'cotenote-application-api'
 
+include 'cotenote-core:cotenote-domain-rds'
+
+
