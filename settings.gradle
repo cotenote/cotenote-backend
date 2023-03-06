@@ -4,4 +4,5 @@ include 'cotenote-application-api'
 
 include 'cotenote-core:cotenote-domain-rds'
 
+include 'cotenote-core:cotenote-web'
 
